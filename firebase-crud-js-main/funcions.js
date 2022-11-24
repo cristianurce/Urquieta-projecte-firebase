@@ -1,5 +1,5 @@
-const taskForm = document.getElementById("task-form");
-const tasksContainer = document.getElementById("task-container");
+const taskForm = document.getElementById("pres-form");
+const tasksContainer = document.getElementById("pres-container");
 const divOcult = document.getElementById("ocult");
 const divpolicia = document.getElementById("policia");
 

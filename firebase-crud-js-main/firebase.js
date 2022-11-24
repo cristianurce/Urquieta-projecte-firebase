@@ -15,7 +15,7 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.6.2/firebase-firestore.js";
 
 // La configuració de Firebase de la vostra aplicació web
-const firebaseConfig = {
+export const firebaseConfig = {
   apiKey: "AIzaSyB9qQv4ZuoF_Xz-pFba4xm3RY8Ol_7vyWg",
   authDomain: "urquieta-firebase-js-crud.firebaseapp.com",
   projectId: "urquieta-firebase-js-crud",
@@ -38,24 +38,26 @@ export const db = getFirestore();
  * @param {string} dataEntrada: la descrinció de la tasca
  * @param {string} dataSortida
  * @param {string} delicte
- * @param {string} nomp
- * @param {string} cognomp
  */
-export const saveTask = (persona, dataEntrada, dataSortida, delicte, nomp, cognom) =>
-  addDoc(collection(db, "prision"), { persona, dataEntrada, dataSortida, delicte, nomp, cognom});
+export const savePres = (persona, dataEntrada, dataSortida, delicte) =>
+  addDoc(collection(db, "prision"), { persona, dataEntrada, dataSortida, delicte});
 
-export const onGetTasks = (callback) =>
-  onSnapshot(collection(db, "prision"), callback);
-
-/**
- *
- * @param {string} id: ID de la tasca
- */
-export const deleteTask = (id) => deleteDoc(doc(db, "prision", id));
-
-export const getTask = (id) => getDoc(doc(db, "prision", id));
-
-export const updateTask = (id, newFields) =>
-  updateDoc(doc(db, "prision", id), newFields);
-
-export const getTasks = () => getDocs(collection(db, "prision"));
+  
+  export const onGetPresos = (callback) => onSnapshot(collection(db, "prision"), callback);
+  
+  /**
+   *
+   * @param {string} id: ID de la tasca
+   */
+  export const deletePres = (id) => deleteDoc(doc(db, "prision", id));
+  export const getPres = (id) => getDoc(doc(db, "prision", id));
+  export const updatePres = (id, newFields) =>  updateDoc(doc(db, "prision", id), newFields);
+  export const getPresos = () => getDocs(collection(db, "prision"));
+  
+  
+  export const savePolicia = (nomp, cognomp) =>  addDoc(collection(db, "policia"), { nomp, cognomp});
+  export const updatePolicia = (id, newFields) =>  updateDoc(doc(db, "policia", id), newFields);
+  export const deletePolicia= (id) => deleteDoc(doc(db, "policia", id));
+  export const getPolicia = (id) => getDoc(doc(db, "policia", id));
+  export const getPolicies = () => getDocs(collection(db, "policia"));
+  export const onGetPolicia = (callback) => onSnapshot(collection(db, "policia"), callback);

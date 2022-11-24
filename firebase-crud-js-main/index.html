@@ -22,8 +22,8 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item active">
-            <button onclick="ocultarinfo()">Prisio</button>
-            <button onclick="ocultarinfo()">Policia</button>
+            <button onclick="ocultarinfo()">Pressos</button>
+            <button onclick="policias()">Policies</button>
           </li>
         </ul>
       </div>
@@ -39,27 +39,28 @@
             <div class="card-body">
               <h1 class="h4">Prision</h1>
 
-              <form id="task-form">
+              <form id="pres-form">
                 <label for="persona">Nom i cognom del pres:</label>
-                <input type="text" id="task-persona"class="form-control mb-3" class="My First Title" placeholder="Nom del pres"autofocus/>
+                <input type="text" id="pres-persona"class="form-control mb-3" class="My First Title" placeholder="Nom del pres"autofocus/>
                 <label for="dataEntrada">Data entrada del pres:</label>
-                <input type="date" id="task-dataE"class="form-control mb-3" class="My First Title" placeholder="Titol de la tasca"autofocus/>
+                <input type="date" id="pres-dataE"class="form-control mb-3" class="My First Title" placeholder="Titol de la tasca"autofocus/>
                 <label for="dataSortida">Data entrada del pres:</label>
-                <input type="date" id="task-dataS"class="form-control mb-3" class="My First Title" placeholder="Titol de la tasca"autofocus/>
+                <input type="date" id="pres-dataS"class="form-control mb-3" class="My First Title" placeholder="Titol de la tasca"autofocus/>
                 <label for="delicte">Delicte:</label>
-                <textarea id="task-delicte" rows="3" class="form-control mb-3" placeholder="Delicte del pres"></textarea>
-                <button class="btn btn-primary" id="btn-task-form">Guarda</button>
+                <textarea id="pres-delicte" rows="3" class="form-control mb-3" placeholder="Delicte del pres"></textarea>
+                <button class="btn btn-primary" id="btn-pres-form">Guarda</button>
               </form>
             </div>
           </div>
         </div>
 
         <!-- Tasks List -->
-        <div class="col-md-6" id="tasks-container"></div>
+        <div class="col-md-6" id="pres-container"></div>
       </div>
     </div>
+    
 
-    <div id="divpolicia" class="container p-4">
+      <div id="divpolicia" class="container p-4">
       <div class="row">
         <div class="col-md-6">
           <div class="card">
@@ -80,10 +81,9 @@
       </div>
     </div>
 
-    
 
     <!-- CUSTOM CODE -->
-    <script src="./index.js" type="module"></script>
+    <script src="./presos.js" type="module"></script>
     <script src="./policia.js" type="module"></script>
   </body>
 </html>
